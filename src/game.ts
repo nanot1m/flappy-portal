@@ -3,7 +3,7 @@ import { animationFrame } from 'rxjs/scheduler/animationFrame'
 import { Observable } from 'rxjs/Observable'
 
 const time$ = Observable.interval(0, animationFrame).map(Date.now)
-const tick$ = time$.zip(time$.skip(1)).map(([t1, t2]) => t2 - t1)
+const tick$ = time$.zip(time$.skip(1), (t1, t2) => t2 - t1)
 const createMouseMove$ = (root: HTMLElement) =>
   Observable.fromEvent(root, 'mousemove').map((x: MouseEvent) => ({
     x: x.clientX - root.offsetLeft,

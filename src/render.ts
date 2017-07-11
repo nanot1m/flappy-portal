@@ -1,5 +1,5 @@
 import { WIDTH, HEIGHT } from './constants'
-import { h, render, Component } from 'preact'
+import { h, render } from 'preact'
 
 const board = (...children: (JSX.Element | JSX.Element[] | string)[]) =>
   h(
