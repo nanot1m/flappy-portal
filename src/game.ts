@@ -42,6 +42,8 @@ const createTurn$ = (mouseMove$: Observable<{ x: number; y: number }>) =>
   mouseMove$
     .startWith({ x: 0, y: 0 })
     .map(({ x, y }) => ({ x: WIDTH / 2 - x, y: y - 50 }))
+    // Хз почему тут минус, но с ним все работает
+    // может тут не тангенс угла нужен?
     .map(({ x, y }) => -Math.atan2(x, y) * 180 / Math.PI)
 
 export const run = (render: (rotation: number) => void, root: HTMLElement) => {

@@ -1,6 +1,11 @@
 import { WIDTH, HEIGHT } from './constants'
+// preact - это как реакт, только маааленький
 import { h, render } from 'preact'
 
+// на самом деле можно было бы написать
+// <div style="...">{children}</div>
+// но мне так больше нравится,
+// но если захочешь, можем и поменять
 const board = (...children: (JSX.Element | JSX.Element[] | string)[]) =>
   h(
     'div',
@@ -17,6 +22,9 @@ const board = (...children: (JSX.Element | JSX.Element[] | string)[]) =>
     ...children
   )
 
+// рисует логотип в нужном месте с нужным углом поворота
+// картинка изначально немного повернута
+// экспериментальным путем выяснил, что этот поворот равен 65 градусам
 const logo = (top: number, left: number, rotation: number) =>
   h('div', {
     style: `
