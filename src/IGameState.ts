@@ -7,6 +7,8 @@ type GameState = {
     rotation: number // надо решить хранить в градусах или радианах,
     position: PositionCoordinates // нужен будет если мы захотим двигаться
   }
+  // можно вместо aliveEnemies и enemies хранить просто массив IEnemy
+  // наверно так даже правильнее будет
   aliveEnemies: string[] // набор ID врагов
   enemies: { [id: string]: IEnemy } // описание врагов
   bullets: IBullet[] // массив дружественных снарядов
