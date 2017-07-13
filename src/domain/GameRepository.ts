@@ -1,13 +1,15 @@
 import { IGameRepository } from './IGameRepository'
-import { IBullet } from './IBullet'
-import { IEnemy } from './IEnemy'
+import { IBullet } from './Bullet/IBullet'
+import { IEnemy } from './Enemy/IEnemy'
+import { IPlayer } from './Player/IPlayer'
+import { Settings } from '../application/Settings'
 
 export class GameRepository implements IGameRepository {
-  player: { rotation: number; position: [number, number] } = {
-    rotation: 0,
-    position: [0, 0]
-  }
-  enemies: IEnemy[] = []
-  playerBullets: IBullet[] = []
-  enemyBullets: IBullet[] = []
+  constructor(
+    public settings: Settings,
+    public player: IPlayer,
+    public enemies: IEnemy[] = [],
+    public playerBullets: IBullet[] = [],
+    public enemyBullets: IBullet[] = []
+  ) {}
 }

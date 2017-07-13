@@ -1,6 +1,5 @@
 export class Settings {
-  width: number
-  height: number
-
-  playerStartPosition: [number, number]
+  constructor(public width: number = 600,
+              public height: number = 400) {
+  }
 }

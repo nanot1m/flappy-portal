@@ -7,6 +7,7 @@
 // - contructors
 import 'rxjs/add/observable/interval'
 import 'rxjs/add/observable/fromEvent'
+// import 'rxjs/add/observable/dom/ajax'
 
 // - operators
 import 'rxjs/add/operator/map'

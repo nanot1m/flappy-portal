@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { IBullet } from '../domain/IBullet'
+import { IBullet } from '../domain/Bullet/IBullet'
 import { Settings } from '../application/Settings'
 
 const WIDTH = 10

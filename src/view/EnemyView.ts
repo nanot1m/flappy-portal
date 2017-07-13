@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { IEnemy } from '../domain/IEnemy'
+import { IEnemy } from '../domain/Enemy/IEnemy'
 import { Settings } from '../application/Settings'
 
 const WIDTH = 40
